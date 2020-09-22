@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Jules Creates Survey</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: url(https://images.unsplash.com/photo-1523484404550-3c2d73d5bc60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80);
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        opacity: 75%;
+      }
+      #title {
+        padding: 10px;
+      }
+
+      #survey-form {
+        background-color: #fffdf9;
+        border: 5px solid lightgray;
+        text-align: left;
+        object-fit: scale-down;
+        max-width: 100%;
+        padding: 100px;
+        margin: 5% 15%;
+      }
+      @media (min-width: 480px) {
+        #survey-form {
+          padding: 4rem;
+        }
+      }
+      header {
+        text-align: center;
+        color: white;
+      }
+      #name {
+        display: flex;
+        width: 100%;
+        height: 25px;
+        padding: 0;
+      }
+      #email {
+        width: 100%;
+        height: 25px;
+      }
+      #number {
+        width: 100%;
+        height: 25px;
+      }
+      #comments {
+        width: 100%;
+        height: 100px;
+      }
+      button {
+        border-radius: 30px;
+        padding: 10px 25px;
+        margin: 10px 0;
+      }
+      button:hover {
+        background-color: #f7d8bc;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1 id="title">Jules Creates Survey Form</h1>
+        <p id="description">
+          Please help us improve our site. Your feedback is greatly appreciated!
+        </p>
+      </header>
+      <main>
+        <form id="survey-form" action="">
+          <p id="name-label"><strong>Name</strong></p>
+
+          <input
+            type="name"
+            name="name"
+            id="name"
+            placeholder="Enter Your Name"
+            required
+          />
+
+          <p id="email-label"><strong>Email</strong></p>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Your Email"
+            required
+          />
+
+          <p id="number-label"><strong>Age (optional)</strong></p>
+
+          <input
+            type="number"
+            id="number"
+            min="12"
+            max="100"
+            placeholder="Age"
+          />
+          <br />
+          <br />
+          <label for="find" id="dropdown"
+            ><p><strong>How did you find us?</strong></p>
+            <select name="find" id="find">
+              <option value="Select an Option" selected disabled>
+                Select an Option
+              </option>
+              <option value="instagram">Instagram</option>
+              <option value="facebook">Facebook</option>
+              <option value="pinterest">Pinterest</option>
+              <option value="google">Google</option>
+            </select>
+          </label>
+          <p><strong>Would you recommend this blog to a friend?</strong></p>
+          <label for="yes">
+            <input id="recommend" type="radio" name="recommend" />Yes
+          </label>
+          <br />
+          <label for="no">
+            <input id="recommend" type="radio" name="recommend" />No
+          </label>
+          <br />
+          <label for="maybe">
+            <input type="radio" name="recommend" id="recommend" />Maybe
+          </label>
+          <label for="favorite" id="dropdown">
+            <p id="favorite">
+              <strong>What is your favorite part of Jules Creates?</strong>
+            </p>
+            <select name="favorite" id="favorite">
+              <option value="" selected disabled>Select an Option</option>
+              <option value="inspiration">Inspiration</option>
+              <option value="tips-tricks">Tips and Tricks</option>
+              <option value="stories">Funny Stories</option>
+              <option value="how-tos">How To's</option>
+              <option value="portfolio">Looking at Pottery</option>
+            </select>
+          </label>
+          <p><strong>What topics are you most interested in?</strong></p>
+          <label for="home">
+            <input id="topics" type="checkbox" /> Home Decor
+          </label>
+          <br />
+          <label for="career">
+            <input type="checkbox" id="topics" /> Career
+          </label>
+          <br />
+          <label for="travel">
+            <input type="checkbox" id="topics" /> Travel
+          </label>
+          <br />
+          <label for="military-spouse">
+            <input type="checkbox" id="topics" /> Military Spouse
+          </label>
+          <br />
+          <label for="baking">
+            <input type="checkbox" id="topics" /> Baking
+          </label>
+          <br />
+          <label for="pottery">
+            <input type="checkbox" id="topics" /> Pottery
+          </label>
+          <br />
+          <p><strong>Additional Comments:</strong></p>
+          <textarea
+            name="comments"
+            id="comments"
+            cols="30"
+            rows="10"
+            placeholder="Enter your comments here..."
+          ></textarea>
+          <br />
+          <button>Submit</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
