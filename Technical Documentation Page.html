@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        font-family: "Open Sans", sans-serif;
+        line-height: 20px;
+      }
+
+      .nav-title {
+        text-align: center;
+      }
+      nav {
+        position: fixed;
+        width: 325px;
+        height: 600px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+      }
+      .navbar {
+        list-style-type: none;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        background-color: #e6e6e6;
+        padding: 5px;
+      }
+      .nav-list {
+        text-decoration-line: none;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .sub-nav-list {
+        text-decoration-line: none;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid white;
+        border-radius: 5px;
+        background-color: white;
+        margin: 10px;
+      }
+      a {
+        text-decoration-line: none;
+        color: black;
+      }
+      .sub-list {
+        padding: 0 50px;
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 16px;
+      }
+      h1 {
+        margin: 10px auto;
+      }
+      .main-section {
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        padding: 10px 25px;
+        min-width: 400px;
+        max-width: 900px;
+        margin: 10px 0 20px 350px;
+      }
+      .sub-section {
+        border: 3px solid #e6e6e6;
+        background-color: #e6e6e6;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 20px 25px;
+        min-width: 350px;
+      }
+      code {
+        border: 3px solid #a2a2a2;
+        background-color: #a2a2a2;
+        border-radius: 5px;
+        padding: 5px;
+        line-height: 20px;
+      }
+      #before {
+        list-style-type: none;
+        line-height: 30px;
+        font-weight: 500;
+      }
+      @media screen and (max-width: 900px) {
+        h1 {
+          font-size: 16px;
+        }
+        h2 {
+          font-size: 14px;
+        }
+        p {
+          font-size: 12px;
+        }
+        ul {
+          font-size: 12px;
+        }
+        code {
+          font-size: 12px;
+        }
+        nav {
+          flex-direction: row;
+          width: 100%;
+          max-height: 225px;
+          min-width: 400px;
+          top: 0;
+          position: relative;
+        }
+        .nav-list {
+          font-size: 14px;
+        }
+        .sub-nav-list {
+          font-size: 12px;
+        }
+        .main-section {
+          margin: 10px 5px;
+          min-width: 400px;
+        }
+        .sub-section {
+          min-width: 300px;
+          margin: 10px 0;
+        }
+        .sub-list {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <nav id="navbar">
+          <h1 class="nav-title">Introduction to CSS</h1>
+          <ul class="navbar">
+            <li class="nav-list"><a href="#introduction">Introduction</a></li>
+            <li class="nav-list"><a href="#Before_CSS">Before CSS</a></li>
+            <li class="nav-list">
+              <a href="#First_Things_First">First things First</a>
+              <ul class="navbar">
+                <li class="sub-nav-list">
+                  <a href="#style-element">Use the Style Element</a>
+                </li>
+                <li class="sub-nav-list">
+                  <a href="#selector-element">Use the Selector Element</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-list">
+              <a href="#Adding_Color">Adding Color</a>
+              <ul class="navbar">
+                <li class="sub-nav-list">
+                  <a href="#changing-color">Changing the color of words</a>
+                </li>
+                <li class="sub-nav-list">
+                  <a href="#changing-background"
+                    >Changing the background color</a
+                  >
+                </li>
+                <li class="sub-nav-list">
+                  <a href="#color-picker">Using a Color Picker</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-list">
+              <a href="#Adjusting_Font">Adjusting Font</a>
+              <ul class="navbar">
+                <li class="sub-nav-list"><a href="#font-size">Font Size</a></li>
+                <li class="sub-nav-list">
+                  <a href="#font-weight">Font Weight</a>
+                </li>
+                <li class="sub-nav-list"><a href="#font-type">Font Type</a></li>
+              </ul>
+            </li>
+            <li class="nav-list">
+              <a href="#Changing_Location">Changing Location</a>
+            </li>
+            <li class="nav-list"><a href="#Try_it_Out">Try it Out!</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main id="main-doc">
+        <br />
+        <section class="main-section" id="introduction">
+          <h1>Introduction</h1>
+          <p>
+            So you’ve learned HTML and now you’re ready for your next steps?
+            Welcome to an introduction to CSS! By learning CSS, you’ll spice up
+            your dull HTML and make it into a beautiful page. Below you’ll learn
+            the basics of changing colors, adjusting the font, and adjusting
+            your text location. Let’s get started!
+          </p>
+        </section>
+
+        <section class="main-section" id="Before_CSS">
+          <h1>Before CSS</h1>
+          <p>Before you learn CSS you should already know:</p>
+          <ul>
+            <li id="before">Where to code (i.e. CodePen or VSCode)</li>
+            <li id="before">How to write HTML</li>
+          </ul>
+        </section>
+
+        <section class="main-section" id="First_Things_First">
+          <h1>First Things First</h1>
+          <p>To start, you'll first need to know how to:</p>
+          <ul>
+            <li id="style-element">Use the style element</li>
+            <li id="selector-element">Target an element as a selector</li>
+          </ul>
+          <section class="sub-list">
+            <section class="sub-section">
+              <h2>Using the style element</h2>
+              <p>
+                While the HTML is in the body, the style will live in the head.
+                You can add this below the title element and above the end of
+                the head. You will simply add the style attribute and put all
+                CSS within it.
+              </p>
+            </section>
+            <section class="sub-section">
+              <h2>Target an element as a selector</h2>
+              <p>
+                Your body may contain many elements such as a header, main,
+                footer, div, etc. When defining what you would like to style,
+                you will first want to identify your element and then place your
+                changes between two brackets such as:
+              </p>
+              <code>h1 { }</code>
+            </section>
+          </section>
+        </section>
+
+        <section class="main-section" id="Adding_Color">
+          <h1>Adding Color</h1>
+          <p>
+            Color adds character to a page and you can adjust the color of many
+            things. Here we will discuss:
+          </p>
+          <ul>
+            <li id="changing-color">Changing the color of words</li>
+            <li id="changing-background">Changing the background color</li>
+            <li id="color-picker">
+              Using a color picker to so you can expand your horizons
+            </li>
+          </ul>
+          <section class="sub-list">
+            <section class="sub-section">
+              <h2>Changing the color of words</h2>
+              <p>
+                First you’ll want to target which element you would like change
+                the color of. As an example if we wanted to change the h1 from
+                it’s standard black to red, we would first add an h1 selector.
+                Then within the style element. Inside the brackets we will
+                target the color by adding color: red;. Once you save and reload
+                your page, you will see the change.
+              </p>
+              <code> h1 { color: red; }</code>
+            </section>
+            <section class="sub-section">
+              <h2>Changing the background color</h2>
+              <p>
+                Similar to changing the color of the word, you will first add
+                the selector with the section of the page you would like to
+                change. If you want the whole page a different color, you will
+                target the body. As an example, we want to change the body from
+                the standard white to blue. First we will add body { }. Within
+                the the brackets, we will target the background-color: blue;
+                like the example below:
+              </p>
+              <code> body { background-color: blue; }</code>
+            </section>
+            <section class="sub-section">
+              <h2>Using a Color Picker</h2>
+              <p>
+                While you can use standard colors such as red or blue, really
+                the world is your oyster. By using a color picker such as Eye
+                Dropper you can hover over colors on your screen and pick up the
+                #, rgb, or hsl and plug it in as your color. For example:
+              </p>
+              <code>
+                p { color: #ffffff; color: hsl(0,0,100); color:
+                rgb(255,255,255); }
+              </code>
+            </section>
+          </section>
+        </section>
+
+        <section class="main-section" id="Adjusting_Font">
+          <h1>Adjusting Font</h1>
+          <p>When adjusting your font, you can manipulate:</p>
+          <ul>
+            <li id="font-size">Font Size</li>
+            <li id="font-weight">Font Weight</li>
+            <li id="font-type">Font Type</li>
+          </ul>
+          <section class="sub-list">
+            <section class="sub-section">
+              <h2>Font Size</h2>
+              <p>
+                Depending on what you are targeting, some elements have
+                predefined measures for a font such as h1 through h6. For this
+                section we will focus on a paragraph. You can adjust the size by
+                first using the selector p { }. Then use font-size: //px,em,
+                etc.;
+              </p>
+              <code> p { font-size: 10px; } </code>
+            </section>
+            <section class="sub-section">
+              <h2>Font Weight</h2>
+              <p>
+                Similar to font size, within the brackets you will use
+                font-weight: //bold, bolder, light, normal, or 100-900. Test it
+                out and see what you like!
+              </p>
+              <code> p { font-weight: 500; } </code>
+            </section>
+            <section class="sub-section">
+              <h2>Font Type</h2>
+              <p>
+                When changing the font, you will use the property of
+                font-family: ;. Here there are options such as Ariel available
+                or you can go to Google Font and add fonts. To do this, you will
+                choose the font you want in Google Font and select “Select this
+                Family”. Here you will select “Embed”. Copy the link and paste
+                it in your code under your title and before style. Then use the
+                given font-family on the selector.
+              </p>
+              <code>
+                p { font-family: Georgia, 'Times New Roman', Times, serif; }
+              </code>
+            </section>
+          </section>
+        </section>
+
+        <section class="main-section" id="Changing_Location">
+          <h1>Changing Location</h1>
+          <p>
+            When you finish your HTML, all of your content is aligned left as a
+            standard. You can change the location in CSS to help make your page
+            flow better. While there are many ways to do this, the most basic
+            way is to use the text-align feature. You will choose your select,
+            for example your h1, which you may want in the center of your
+            screen. Using text-align, you can choose left, right, center, etc.
+            which would look like:
+          </p>
+          <code> h1 { text-align: center; } </code>
+        </section>
+
+        <section class="main-section" id="Try_it_Out">
+          <h1>Try it Out!</h1>
+          <p>
+            That concludes a basic introduction to CSS. Take a moment to try out
+            these features and bring your HTML to life!
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
