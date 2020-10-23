@@ -41,32 +41,40 @@
         color: white;
       }
 
+      #welcome-section {
+        width: 100%;
+        height: 100vh;
+      }
+      .welcome-section {
+        display: grid;
+        grid-template-columns: 35% 65%;
+      }
       .name {
         display: flex;
         margin: auto;
         padding: 5px 20px;
         max-width: 800px;
+        min-width: 350px;
+        grid-row: 2/1;
+        margin-top: 100px;
       }
-
-      #welcome-section {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-      }
-
       .portfolio-pic {
         border-radius: 50%;
         max-width: 200px;
         margin-left: auto;
         align-self: center;
+        grid-column: 1;
       }
       .hello {
         color: #945843;
         margin: 5px;
       }
       .welcome-wording {
-        margin: 0 225px 0 100px;
+        margin: 0 300px 0 100px;
         text-align: justify;
-        min-width: 400px;
+        max-width: 500px;
+        min-width: 300px;
+        grid-column: 2;
       }
       p {
         margin: 0;
@@ -80,13 +88,24 @@
         color: white;
         letter-spacing: 3px;
       }
+      .projects {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+      }
       .work-title {
         margin: 30px 0;
+        grid-row: 1;
       }
       .project-tile {
         margin: 10px;
         width: 350px;
         border-radius: 3px;
+      }
+      .top-row {
+        grid-row: 1;
+      }
+      .bottom-row {
+        grid-row: 2;
       }
 
       .contact-info {
@@ -104,6 +123,47 @@
         background-color: #dc9c81;
         text-align: center;
       }
+      @media screen and (max-width: 600px) {
+        .nav-links {
+          display: block;
+          font-size: 12px;
+          line-height: 5px;
+        }
+        #nav-bar {
+          min-width: 235px;
+        }
+        .nav-bar {
+          margin: 0;
+        }
+        .name {
+          width: 350px;
+          margin-top: 120px;
+          margin-left: auto;
+        }
+        .welcome-section {
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 0;
+        }
+        .portfolio-pic {
+          grid-row: 1;
+          width: 170px;
+          margin-left: 100px;
+        }
+        .welcome-wording {
+          grid-row: 2;
+          font-size: 14px;
+          margin-left: 50px;
+        }
+        .project-tile {
+          width: 300px;
+        }
+        .contact-me {
+          padding: 10px;
+        }
+        .contact-img {
+          width: 20px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -116,96 +176,107 @@
         </ul>
       </nav>
     </header>
-    <div>
-      <br />
-      <br />
-      <br />
-    </div>
-
-    <img
-      class="name"
-      src="https://lh3.googleusercontent.com/4IEBNe-lEAEPKFy6TRZFp5QPE0DFmvqYJlQvsnqL8vJr-tp7Ky_2Tkx6fZ3UBQgKK2Kzs1sc9yskGGUvEcBg3R7RAaeds98OO2LKrLi9xWWUIPqjbLkrhTief1FkAZ9xZKulTMekXAiqfDvftErKS6F8u4a2s3H4TcO5rys9LU4h-QRKctOADqCVYjg3mxyRwEQ7CMDujUn1NrzeLaRM2kgr6JoaQZr6cTWoizC_sDFP1EiM7wJqev_f1q234WcD0jz2P1i7TSC6Q5PzQTCUIv0X4tW04Z6CkdwPW-O_Rj2ICaD4zmCj9oJTS-Pf7T41L53TZRJQv4ka3XUquYNo1G0q5T2N7io0oFBLYRHd-CbpZ-z_GrEuyhnWeoxAt7p5DJtGsGfszxtPqnr1V1pzvlkiX2Eo2AcLLcezf9CnJY7CwkhyXwaosxw3RJe2808eUhzfvbXFg6-Efy6qzTdEko0wPhJqB-3HFV2y_OfSF1V95OiOzQYtoylof-lprYyTbX6LBltdJoh2N9BZpm3u1n2RJcgOIDRHzT0PU97zvzEM1oA3hwGRf_fSWxa1LxyLZX21Umab6Zvwy_J8xoRvKV80kmIhFKrTYIaQNvF82mmJ7eFD7eQ837hBlZF7z35plFD6vfQTb4YiBVrXHK3EYDJsUgYi7VWUDqqAjpZXa5KyNWGZmytlAy4p8NRc=w1366-h442-no?authuser=0"
-      alt="Julia Varney"
-    />
 
     <section id="welcome-section">
       <img
-        class="portfolio-pic"
-        src="https://lh3.googleusercontent.com/n0zCSAWbExw75K8P_m65c5qYCflCvebn6psMcUFy_kL76Qyc8hTGzFwRYh2o6HjRIsAeraXHYHynWiR2m8QjUryJBMaXre_WAsuTy9OS7KMUyMcMI8kKG7xeCileQplL5aTp819cQbNhTbANYN6UjaUkGlFuv6d1xI8FN3F554iL3S7Wnxfi0-geDCpOC-adZ5_DTG2nMVVFE15ybQRLtIq7HKfTZGvuRn7Chm3tFgvAT-kTpGgpQZ8mhiQsitKMbDrv1eKOVmoVPEyubFCheDPqenbMzKILSjrePvMN1qC9dYkrkpjjJYFh-PrEGT7rV-2GUYCcNfHKTWTbYqUhIxpsEVcpBFS1m1yGRBTrYhYqDD8e5wJtToiyXTb-Z-1fH7PrFaRB9bkOsL9QHgp7QJS_c5GZ2ECeupBiC-onSfpVl98AFRzGMf5KaeZGj9WpHHJPPFqsE-JND03MDZ3rjm8IJgc8bo8xnlnbuJcPKpASwIN3ghfEhNm8BrxOBpotTBoFc8f1-24HBPbi3G0GTRQARJbp5DQS8smcm4-AMo2mO4LWJxfaqH7bTJtL88VAROAuLFkZGnATmRyS0MaXqlkBVBBjQkz-wHn41frgTnWRErloscUnc0Z3Cq9cM33UJkUR9V7uqcFweg5XnBbcZsfpvqGdIMXaWra8WVj3Xt-fWatpeaGRq8CybAU=w603-h626-no?authuser=0"
-        alt="Profile picture of Julia Varney."
+        class="name"
+        src="https://lh3.googleusercontent.com/4IEBNe-lEAEPKFy6TRZFp5QPE0DFmvqYJlQvsnqL8vJr-tp7Ky_2Tkx6fZ3UBQgKK2Kzs1sc9yskGGUvEcBg3R7RAaeds98OO2LKrLi9xWWUIPqjbLkrhTief1FkAZ9xZKulTMekXAiqfDvftErKS6F8u4a2s3H4TcO5rys9LU4h-QRKctOADqCVYjg3mxyRwEQ7CMDujUn1NrzeLaRM2kgr6JoaQZr6cTWoizC_sDFP1EiM7wJqev_f1q234WcD0jz2P1i7TSC6Q5PzQTCUIv0X4tW04Z6CkdwPW-O_Rj2ICaD4zmCj9oJTS-Pf7T41L53TZRJQv4ka3XUquYNo1G0q5T2N7io0oFBLYRHd-CbpZ-z_GrEuyhnWeoxAt7p5DJtGsGfszxtPqnr1V1pzvlkiX2Eo2AcLLcezf9CnJY7CwkhyXwaosxw3RJe2808eUhzfvbXFg6-Efy6qzTdEko0wPhJqB-3HFV2y_OfSF1V95OiOzQYtoylof-lprYyTbX6LBltdJoh2N9BZpm3u1n2RJcgOIDRHzT0PU97zvzEM1oA3hwGRf_fSWxa1LxyLZX21Umab6Zvwy_J8xoRvKV80kmIhFKrTYIaQNvF82mmJ7eFD7eQ837hBlZF7z35plFD6vfQTb4YiBVrXHK3EYDJsUgYi7VWUDqqAjpZXa5KyNWGZmytlAy4p8NRc=w1366-h442-no?authuser=0"
+        alt="Julia Varney"
       />
-      <div class="welcome-wording">
-        <h1 class="hello">Hello!</h1>
-        <p>
-          I'm a Project Coordinator by day and a student in front-end
-          development any time I'm not working. With a love of reading, rock
-          climbing, pottery throwing, and overall being submerged in the
-          outdoors when I step away from my computer. Please check out my work
-          below and feel free to connect with me on social media or shoot me an
-          email!
-        </p>
-      </div>
-      <br />
-      <br />
+      <section class="welcome-section">
+        <img
+          class="portfolio-pic"
+          src="https://lh3.googleusercontent.com/n0zCSAWbExw75K8P_m65c5qYCflCvebn6psMcUFy_kL76Qyc8hTGzFwRYh2o6HjRIsAeraXHYHynWiR2m8QjUryJBMaXre_WAsuTy9OS7KMUyMcMI8kKG7xeCileQplL5aTp819cQbNhTbANYN6UjaUkGlFuv6d1xI8FN3F554iL3S7Wnxfi0-geDCpOC-adZ5_DTG2nMVVFE15ybQRLtIq7HKfTZGvuRn7Chm3tFgvAT-kTpGgpQZ8mhiQsitKMbDrv1eKOVmoVPEyubFCheDPqenbMzKILSjrePvMN1qC9dYkrkpjjJYFh-PrEGT7rV-2GUYCcNfHKTWTbYqUhIxpsEVcpBFS1m1yGRBTrYhYqDD8e5wJtToiyXTb-Z-1fH7PrFaRB9bkOsL9QHgp7QJS_c5GZ2ECeupBiC-onSfpVl98AFRzGMf5KaeZGj9WpHHJPPFqsE-JND03MDZ3rjm8IJgc8bo8xnlnbuJcPKpASwIN3ghfEhNm8BrxOBpotTBoFc8f1-24HBPbi3G0GTRQARJbp5DQS8smcm4-AMo2mO4LWJxfaqH7bTJtL88VAROAuLFkZGnATmRyS0MaXqlkBVBBjQkz-wHn41frgTnWRErloscUnc0Z3Cq9cM33UJkUR9V7uqcFweg5XnBbcZsfpvqGdIMXaWra8WVj3Xt-fWatpeaGRq8CybAU=w603-h626-no?authuser=0"
+          alt="Profile picture of Julia Varney."
+        />
+        <div class="welcome-wording">
+          <h1 class="hello">Hello!</h1>
+          <p>
+            I'm a Project Coordinator by day and a student in front-end
+            development any time I'm not working. With a love of reading, rock
+            climbing, pottery throwing, and overall being submerged in the
+            outdoors when I step away from my computer. Please check out my work
+            below and feel free to connect with me on social media or shoot me
+            an email!
+          </p>
+        </div>
+      </section>
     </section>
 
     <section id="projects">
       <h1 class="work-title">Check Out My Work</h1>
-      <a
-        href="file:///C:/Users/Jvarney/FreeCodeCamp/Portfolio/blog.html"
-        target="blank"
-      >
-        <img
-          class="project-tile"
-          src="https://lh3.googleusercontent.com/NryGImRjUbGlErDbZfZKBwY_k1d-dRZLzozwLQRXRLZDdpBTwSxvR-mvC5nUvhbNslplpXBrBknTaCFLfLicAbwN16yRplkFDgHwe8Y68_pkH7fnwiC4SMolbIJaL086ZFeV1ZV_2mvZVPMvxn3l68mnV7POsjTxqy9dYzVt77kA5GtpK1zxNbPeAcwSCL_-kYcu7n53WlVa86hkx31KRrfMAub1pLjVGnBKEviUZy3XtwCW2YFThr_V2eVrWOy6mYz21-9OHlVcbfy6KxwEgsZAKiuopupn0o9O_EyodoPUtw-JNClpPvsvFcgg7oqljUIp3tqWhXXayQWa5BxB4p-2j_ZAs8Q43sx73dI31BkUX3yIiFSJrB0VNR0Hl4k2nAA3dwXcOihoIrEn33E8DXkUq1m_kwBBT2gWBpxAbyKl4ehhOwm4ZbVajm07MC63namY3utW6A8uk7H40S2lDI3-xysJujbgPQjPi1HgcyUekcU1NgUjhRs7MQ2V2iv8r4n2N5WXzJbm0kZaoY8mkZuAj46hW9ul0MaIPCjaDTd6W3LYFp1JM1oPmwSvPVtQ-FA4L1CBdqQ_MkUEIC2wShFm6X89uqXi-Voiwmom1ziQcK0MqzSfcEzqEFvNwGjIuE-In1d-MTU4taftbnwPLd-aSiFPaKVN4ohP6Z7HJZA8MUO4ecF__sjUR5c=w1330-h621-no?authuser=0"
-          alt="Jules Creates blog"
-          width="400"
-      /></a>
-      <a
-        href="file:///C:/Users/Jvarney/FreeCodeCamp/product.html"
-        target="blank"
-      >
-        <img
-          class="project-tile"
-          src="https://lh3.googleusercontent.com/P78gGu9YxAc3_VX9nfLkAQOkiep7v47reg26wCghcFeAK2vAadlH9ICQEqAR1t1Al5IeLqhCyz6CXjOe9sDL2bTFw0nTwAXfuSkcHecvhHH1fVKi9zYO2scBITReDc5r4cavaM2Kkj2v9S0jhYj7A32dSPdv-wzG_FsobVGsxrUTlARxeDLE95kQd2MKkkwjK53q_smwzZXgfb0fHjNqFzTQQ5yV4HtNvzVUwxXukji17FiunQiRcIP0zoRWOqDfbCpBA9qIigqTdg6vkVyrYzsX8KhcBUCOQmzL-Xt3YtahK0fyGEJHT3SeELyB3DJyoucKkgw6vIpUbEHOPKUX7Kt8CywLa6S8W5MMhKfrdWKGFrpGtJIFabgSkczdAVvCaAEBopFxZENoQkky1HbXZ5DijVilL9nh3qlpEBkd3xkprQ1uXUOsmu4PAQiTJT0qKIU52r3TP99oT_7x1c4cirYj1aRrr8nKJWQPcJnomNuK0SctKJGrY5WHTx0T7WRjbq5Ba_z27ec3uyQ0pmnUrtLfbRD41JqhQw1vLIxi2NPc0_xRNmX4tPGa1Wh7Es-3xHIAc8vwtSmjJ6o6PVM-RQ7k4VgbiFOXiysnZ_DzhhzF--Cyaj5kyBWMam9elGDDzLv3du45qog_hBH6ZmwH4CGWDec53KDrZta1xGc2B1_wdFL9Ci8YBvYwRGQ=w1345-h622-no?authuser=0"
-          alt="Jules Create product site"
-          width="400"
-      /></a>
-      <a
-        href="file:///C:/Users/Jvarney/FreeCodeCamp/survey.html"
-        target="blank"
-      >
-        <img
-          class="project-tile"
-          src="https://lh3.googleusercontent.com/YsCYXa-RkrtfcR4biw7xSK_qx3_ucpYUU82LbbbdUOIN9ZAs27M9jjb5VM3gjEXNt_2cR5xIcYQDKg6VPrdzBcF4xvlyvHNFl5duJdhBb70-zp660fHgmOlQnbN5o_sNzBW7Qy36nTrNuAayiXo3nq-yvXkb7PSAY5xmtnRPgydaq-W7n7FWubPFFzmVbuohYv42hc6naQkHrAk2FSOp_i5IQ4sFX1HqBaUn1Wf8jYPrkTArtBmSm93gS-Ti_hvwMtTP2XGvx-DU0Byi4vlYUgw6TBbCqdD0UY9Mlf0D8hbNP1Pg9uSJ6gt4sWFeN2t1gahaTQleiRTqW0PDO_a3RHY5Tf78OZUsGQ8H7sybnA4M_-CYnhfE5KaC2O6Z5u7tP5OOcb_L5J0WZN-XRyIr8rgyRwKkBOrQSf7WHO_sRwyN9mNYOduLkqtFddVyd09hom_IIDdpJZ7MuBjJjY_IlChSkFgPmBiooUGexZT7MSEp1zRR3b6XrZ8tkiMds8YiO1PjmWdW2UJHKdOAe0zTbtRavlo8YkVP_4qriIQOyMCDRGT-NvstDw_CqqPHTzZCgPhtP_fRTkMxFny5xMRloX5T1HWCxvykJ2h0dvHAT3liVu9fg3t0r6IFCModVs4LZqYwYJxvJKT3s37lb8tqF5J5_qAPiII78cgB1DpO96fL2sOYXKTSmPeazsPA=w1346-h623-no?authuser=0"
-          alt="Jules Creates product survey page"
-          width="400"
-      /></a>
-      <br />
-      <a
-        href="file:///C:/Users/Jvarney/FreeCodeCamp/tech-doc.html"
-        target="blank"
-      >
-        <img
-          class="project-tile"
-          src="https://lh3.googleusercontent.com/DoppNV1DT8PPCwVYh7b22IewL2LCyMLAsYLAcCRuulRc8ZqYpXMUFj61fBF4YFYZcVZvdK9_liOHrUx80S0eCTolgE8t4txeFBVAPB1yL7aPdz_OGBg_5Gc_Io7rxNahYmQlnaJ1_cpUg8OO3qSdEgdI2jrBuMPCGbMVeONrlt91HjdkAH8yN1UIhKBLQVUYm2QV2HzgoG_qlMhUr570yZ9Una-wlpnU-kNGfo_RG6rlFbvVHL1joHiEXRkHSUweBTot3Jvw2zsY6RPREZL8J0kfS0uOZvQTy_ET51mI7aj4t19PrRz7lgZxC7WJUqYo-bEk0BRiQh5Wa8FHD0unC3jNTYk7bc4mc3ivuNQJLFJNVpnKNlsTqOv_wAYD_LoouMITtRGEB3PHYP1qMUhBToX2aOLPzop56EhpSg9nDBKlRK4u8wl-DtU-pU1PYgTy8L4_trNDA5w1YFY3sL8Ihn-0pGwhUnh0LZNhiroRyXEKrU1BRWIc3P_FXqgPMm6ArMsXGpZ6nprZBLeBXc5EZ_sL9n-tJVPKP-Q0bNiyzdhj2KAknOp0ueI7seCeSWALiAeErqNnX3JSI7hT0srZvRR5jtLzeSF_f_OciWzfoAXejfr95k57yhuX5ddlo9DjjL7t62W78WRYjbsmetDaWi4zatggFyqfeJkOILvXi47f1YWFcP4LxCZm1WMt=w1349-h616-no?authuser=0"
-          alt="Technical documentation page for introduction to CSS"
-          width="400"
-      /></a>
-      <a href="file:///C:/Users/Jvarney/SheCode/project.html" target="blank">
-        <img
-          class="project-tile"
-          src="https://lh3.googleusercontent.com/WRGRFqHNPRst712TvD-JeBGc-M2-55XJrpft_NcyIBe-WQSs7OQLAIl8JMGoH0PSDYahQlsHVeymS_Y_Sebr1rcWj5sjPRqN5qIBrA_0RJyRFyDlFDk-vy9YqdtO5XfTqZUZb7-MpI_yC9F4KlJEOxi9qGQoFsULn36pT_ZnX2GaIjgVJ9gHWoQhEx2isIM3-A9qbFTAmJ4K5sZ22fZwjtjhNu3YCpBfCU4O-3pUICwLFbjHsJO4wPJmf0sNtzcoSwyMkTuphgzwQK355etofg_PblIcupYBc_OZrzhiEZrqSIIopeyVSO6-h4EqLpYg1lNgKsWjF-6f5S_Xj7ysXM6MNwT0co5gU27ZB_Il4KQGYyLOvE3Ddfz9pjGb3qXYCdS04B-vYzdE0TIXD7g1KzWHALKX6kgAt7E_e9RQ8ebp33wbZf66xzzLpRgDbFqdkesen0NZ-NSii3xxPa6Sr__Y6FGEjoGabQk51n8Y3riH5mJyrgOUF_sDuMr4p_6UN9DSQsCPapuPKVAXlYPns3CUlZZCsxiWbVWowHrZz6M6AcBnPgOrDXhwDt_4aHEyu8LknqBMJKuods5fYDgPPURUcBquYimTKPkxL6JFAHWFwrTtLa0fOwQIVfWvRTDqtl5OA-4uB89Mnyfw20ClZA_o2_7QnC6cAS_O7TfDBnruhjQmh2QecdxlToN0=w1347-h621-no?authuser=0"
-          alt="Tribute site to Carol Dweck"
-          width="400"
-      /></a>
-      <a href="file:///C:/Users/Jvarney/SheCode/homeworkw2.html" target="blank">
-        <img
-          class="project-tile"
-          src="https://lh3.googleusercontent.com/Quf53Gm0YA08Pq5PUdVGtiwaXOhTRwWO_bwW68wt5eOR2e0zIAvHwoOWz83Slk1FNeA77pwP0JV2nvp_9d0d78Mn14lvPBhcGxvj4lnPAqtrNgGjPGXxxK_1mDuzh_AtTo5hNCwWiOPefVDxz7JlexIo3XLxiBpVJsj8y-iFMBAtX46L9kjZA16s83SyOKc-rG7Dwn_O5NgE5ezxIM2rG7l8NnUJ_ETenEpdebDdcb4qOvQ_r7alzFkxMm4RszRrMTQbVX9MGnuvbc4y9Qm8A6juf1hGL-aL0-0FXwYw1nUIhJAg1Vc5MvMSY9sRhu2xwfpBcHV706493rumeBJbrpoD2lNobQMU_07OirdVP18u2kfutoGLE7i1QdY3FF88hBVZpr4er6J2wjiHEN2qkkkZGY1_YLtcmELX-pAQ0XDS05M0AXOu0Cc0Rdr8MlqrEDB-XIfIK_6Z0Erh7mV8L_RqnDE80JKtlrYF7EdVj7FGFlr8NlMPZssa8deAbsxoGeQCJ1vqG7JjIEKsY1JMBlPWxWcil6RJM07arLYD62C7KfL9CwiKXxGpL8AJhBwB9DztPEMpkTyFP5uzx418KVu1pbOFOym9YyW1PaZEF2EP9VJZP4DcvrpvhAqoX5LXaq_3HV0DMcWXqK-HMRN8nMxT7TMUeLl09vdnypGjvdl8VU_RNGlRkgGrBXHT=w1347-h622-no?authuser=0"
-          alt="Weather site using your location"
-          width="400"
-      /></a>
+      <section class="projects">
+        <section class="top-row">
+          <a
+            href="file:///C:/Users/Jvarney/FreeCodeCamp/Portfolio/blog.html"
+            target="blank"
+            class="proj-1"
+          >
+            <img
+              class="project-tile"
+              src="https://lh3.googleusercontent.com/NryGImRjUbGlErDbZfZKBwY_k1d-dRZLzozwLQRXRLZDdpBTwSxvR-mvC5nUvhbNslplpXBrBknTaCFLfLicAbwN16yRplkFDgHwe8Y68_pkH7fnwiC4SMolbIJaL086ZFeV1ZV_2mvZVPMvxn3l68mnV7POsjTxqy9dYzVt77kA5GtpK1zxNbPeAcwSCL_-kYcu7n53WlVa86hkx31KRrfMAub1pLjVGnBKEviUZy3XtwCW2YFThr_V2eVrWOy6mYz21-9OHlVcbfy6KxwEgsZAKiuopupn0o9O_EyodoPUtw-JNClpPvsvFcgg7oqljUIp3tqWhXXayQWa5BxB4p-2j_ZAs8Q43sx73dI31BkUX3yIiFSJrB0VNR0Hl4k2nAA3dwXcOihoIrEn33E8DXkUq1m_kwBBT2gWBpxAbyKl4ehhOwm4ZbVajm07MC63namY3utW6A8uk7H40S2lDI3-xysJujbgPQjPi1HgcyUekcU1NgUjhRs7MQ2V2iv8r4n2N5WXzJbm0kZaoY8mkZuAj46hW9ul0MaIPCjaDTd6W3LYFp1JM1oPmwSvPVtQ-FA4L1CBdqQ_MkUEIC2wShFm6X89uqXi-Voiwmom1ziQcK0MqzSfcEzqEFvNwGjIuE-In1d-MTU4taftbnwPLd-aSiFPaKVN4ohP6Z7HJZA8MUO4ecF__sjUR5c=w1330-h621-no?authuser=0"
+              alt="Jules Creates blog"
+              width="400"
+          /></a>
+          <a
+            href="file:///C:/Users/Jvarney/FreeCodeCamp/product.html"
+            target="blank"
+            class="proj-2"
+          >
+            <img
+              class="project-tile"
+              src="https://lh3.googleusercontent.com/P78gGu9YxAc3_VX9nfLkAQOkiep7v47reg26wCghcFeAK2vAadlH9ICQEqAR1t1Al5IeLqhCyz6CXjOe9sDL2bTFw0nTwAXfuSkcHecvhHH1fVKi9zYO2scBITReDc5r4cavaM2Kkj2v9S0jhYj7A32dSPdv-wzG_FsobVGsxrUTlARxeDLE95kQd2MKkkwjK53q_smwzZXgfb0fHjNqFzTQQ5yV4HtNvzVUwxXukji17FiunQiRcIP0zoRWOqDfbCpBA9qIigqTdg6vkVyrYzsX8KhcBUCOQmzL-Xt3YtahK0fyGEJHT3SeELyB3DJyoucKkgw6vIpUbEHOPKUX7Kt8CywLa6S8W5MMhKfrdWKGFrpGtJIFabgSkczdAVvCaAEBopFxZENoQkky1HbXZ5DijVilL9nh3qlpEBkd3xkprQ1uXUOsmu4PAQiTJT0qKIU52r3TP99oT_7x1c4cirYj1aRrr8nKJWQPcJnomNuK0SctKJGrY5WHTx0T7WRjbq5Ba_z27ec3uyQ0pmnUrtLfbRD41JqhQw1vLIxi2NPc0_xRNmX4tPGa1Wh7Es-3xHIAc8vwtSmjJ6o6PVM-RQ7k4VgbiFOXiysnZ_DzhhzF--Cyaj5kyBWMam9elGDDzLv3du45qog_hBH6ZmwH4CGWDec53KDrZta1xGc2B1_wdFL9Ci8YBvYwRGQ=w1345-h622-no?authuser=0"
+              alt="Jules Create product site"
+              width="400"
+          /></a>
+          <a
+            href="file:///C:/Users/Jvarney/FreeCodeCamp/survey.html"
+            target="blank"
+            class="proj-3"
+          >
+            <img
+              class="project-tile"
+              src="https://lh3.googleusercontent.com/YsCYXa-RkrtfcR4biw7xSK_qx3_ucpYUU82LbbbdUOIN9ZAs27M9jjb5VM3gjEXNt_2cR5xIcYQDKg6VPrdzBcF4xvlyvHNFl5duJdhBb70-zp660fHgmOlQnbN5o_sNzBW7Qy36nTrNuAayiXo3nq-yvXkb7PSAY5xmtnRPgydaq-W7n7FWubPFFzmVbuohYv42hc6naQkHrAk2FSOp_i5IQ4sFX1HqBaUn1Wf8jYPrkTArtBmSm93gS-Ti_hvwMtTP2XGvx-DU0Byi4vlYUgw6TBbCqdD0UY9Mlf0D8hbNP1Pg9uSJ6gt4sWFeN2t1gahaTQleiRTqW0PDO_a3RHY5Tf78OZUsGQ8H7sybnA4M_-CYnhfE5KaC2O6Z5u7tP5OOcb_L5J0WZN-XRyIr8rgyRwKkBOrQSf7WHO_sRwyN9mNYOduLkqtFddVyd09hom_IIDdpJZ7MuBjJjY_IlChSkFgPmBiooUGexZT7MSEp1zRR3b6XrZ8tkiMds8YiO1PjmWdW2UJHKdOAe0zTbtRavlo8YkVP_4qriIQOyMCDRGT-NvstDw_CqqPHTzZCgPhtP_fRTkMxFny5xMRloX5T1HWCxvykJ2h0dvHAT3liVu9fg3t0r6IFCModVs4LZqYwYJxvJKT3s37lb8tqF5J5_qAPiII78cgB1DpO96fL2sOYXKTSmPeazsPA=w1346-h623-no?authuser=0"
+              alt="Jules Creates product survey page"
+              width="400"
+          /></a>
+        </section>
+        <section class="bottom-row">
+          <a
+            href="file:///C:/Users/Jvarney/FreeCodeCamp/tech-doc.html"
+            target="blank"
+            class="proj-4"
+          >
+            <img
+              class="project-tile"
+              src="https://lh3.googleusercontent.com/DoppNV1DT8PPCwVYh7b22IewL2LCyMLAsYLAcCRuulRc8ZqYpXMUFj61fBF4YFYZcVZvdK9_liOHrUx80S0eCTolgE8t4txeFBVAPB1yL7aPdz_OGBg_5Gc_Io7rxNahYmQlnaJ1_cpUg8OO3qSdEgdI2jrBuMPCGbMVeONrlt91HjdkAH8yN1UIhKBLQVUYm2QV2HzgoG_qlMhUr570yZ9Una-wlpnU-kNGfo_RG6rlFbvVHL1joHiEXRkHSUweBTot3Jvw2zsY6RPREZL8J0kfS0uOZvQTy_ET51mI7aj4t19PrRz7lgZxC7WJUqYo-bEk0BRiQh5Wa8FHD0unC3jNTYk7bc4mc3ivuNQJLFJNVpnKNlsTqOv_wAYD_LoouMITtRGEB3PHYP1qMUhBToX2aOLPzop56EhpSg9nDBKlRK4u8wl-DtU-pU1PYgTy8L4_trNDA5w1YFY3sL8Ihn-0pGwhUnh0LZNhiroRyXEKrU1BRWIc3P_FXqgPMm6ArMsXGpZ6nprZBLeBXc5EZ_sL9n-tJVPKP-Q0bNiyzdhj2KAknOp0ueI7seCeSWALiAeErqNnX3JSI7hT0srZvRR5jtLzeSF_f_OciWzfoAXejfr95k57yhuX5ddlo9DjjL7t62W78WRYjbsmetDaWi4zatggFyqfeJkOILvXi47f1YWFcP4LxCZm1WMt=w1349-h616-no?authuser=0"
+              alt="Technical documentation page for introduction to CSS"
+              width="400"
+          /></a>
+          <a
+            href="file:///C:/Users/Jvarney/FreeCodeCamp/tribute.html"
+            target="blank"
+            class="proj-5"
+          >
+            <img
+              class="project-tile"
+              src="https://lh3.googleusercontent.com/WRGRFqHNPRst712TvD-JeBGc-M2-55XJrpft_NcyIBe-WQSs7OQLAIl8JMGoH0PSDYahQlsHVeymS_Y_Sebr1rcWj5sjPRqN5qIBrA_0RJyRFyDlFDk-vy9YqdtO5XfTqZUZb7-MpI_yC9F4KlJEOxi9qGQoFsULn36pT_ZnX2GaIjgVJ9gHWoQhEx2isIM3-A9qbFTAmJ4K5sZ22fZwjtjhNu3YCpBfCU4O-3pUICwLFbjHsJO4wPJmf0sNtzcoSwyMkTuphgzwQK355etofg_PblIcupYBc_OZrzhiEZrqSIIopeyVSO6-h4EqLpYg1lNgKsWjF-6f5S_Xj7ysXM6MNwT0co5gU27ZB_Il4KQGYyLOvE3Ddfz9pjGb3qXYCdS04B-vYzdE0TIXD7g1KzWHALKX6kgAt7E_e9RQ8ebp33wbZf66xzzLpRgDbFqdkesen0NZ-NSii3xxPa6Sr__Y6FGEjoGabQk51n8Y3riH5mJyrgOUF_sDuMr4p_6UN9DSQsCPapuPKVAXlYPns3CUlZZCsxiWbVWowHrZz6M6AcBnPgOrDXhwDt_4aHEyu8LknqBMJKuods5fYDgPPURUcBquYimTKPkxL6JFAHWFwrTtLa0fOwQIVfWvRTDqtl5OA-4uB89Mnyfw20ClZA_o2_7QnC6cAS_O7TfDBnruhjQmh2QecdxlToN0=w1347-h621-no?authuser=0"
+              alt="Tribute site to Carol Dweck"
+              width="400"
+          /></a>
+          <a
+            href="file:///C:/Users/Jvarney/SheCode/homeworkw2.html"
+            target="blank"
+            class="proj-6"
+          >
+            <img
+              class="project-tile"
+              src="https://lh3.googleusercontent.com/Quf53Gm0YA08Pq5PUdVGtiwaXOhTRwWO_bwW68wt5eOR2e0zIAvHwoOWz83Slk1FNeA77pwP0JV2nvp_9d0d78Mn14lvPBhcGxvj4lnPAqtrNgGjPGXxxK_1mDuzh_AtTo5hNCwWiOPefVDxz7JlexIo3XLxiBpVJsj8y-iFMBAtX46L9kjZA16s83SyOKc-rG7Dwn_O5NgE5ezxIM2rG7l8NnUJ_ETenEpdebDdcb4qOvQ_r7alzFkxMm4RszRrMTQbVX9MGnuvbc4y9Qm8A6juf1hGL-aL0-0FXwYw1nUIhJAg1Vc5MvMSY9sRhu2xwfpBcHV706493rumeBJbrpoD2lNobQMU_07OirdVP18u2kfutoGLE7i1QdY3FF88hBVZpr4er6J2wjiHEN2qkkkZGY1_YLtcmELX-pAQ0XDS05M0AXOu0Cc0Rdr8MlqrEDB-XIfIK_6Z0Erh7mV8L_RqnDE80JKtlrYF7EdVj7FGFlr8NlMPZssa8deAbsxoGeQCJ1vqG7JjIEKsY1JMBlPWxWcil6RJM07arLYD62C7KfL9CwiKXxGpL8AJhBwB9DztPEMpkTyFP5uzx418KVu1pbOFOym9YyW1PaZEF2EP9VJZP4DcvrpvhAqoX5LXaq_3HV0DMcWXqK-HMRN8nMxT7TMUeLl09vdnypGjvdl8VU_RNGlRkgGrBXHT=w1347-h622-no?authuser=0"
+              alt="Weather site using your location"
+              width="400"
+          /></a>
+        </section>
+      </section>
     </section>
 
     <section id="lets-connect">
@@ -218,6 +289,7 @@
             <img
               src="https://lh3.googleusercontent.com/C_sZ8gjS3MPlglWCcJe4Ys10VOooBMGplNqFtKteOncjUFi3nTMReyYLU_oSKsniy12xU6GPzwpgRZzx-0SBfU3DyOnJEK1y1W-Uxtm5xHdMzg-6nPXid_VEiaYf_RN8Bhh9_oyGGadBSXmMgZG4IGXNZqCmOHVxhVx5axfpb4q5CAqlSElor93Un__g7Ir-gXvmnPpGJWvclfgMYywcd4-_tuvRj4yaMi2XtcZroegPLfEBbCRbvvLOGFA1AM1tsR9Bc3G3Pjb-_W9rsS3rAJpimgCEeBviwA1V3302njNyvbI-0wt6pBSy8RHy5IPkWR5UN2ED2lfT148RXFePlxyKKICm1KDFrLNbTYe8-2v9_wm8TTazjjq_6dBSng9UED3N9w4bNHcok8IK_QoAkmI8fRipczKm10HJEyU31kOMfeP0Etxthf2me4ATUtXwj8tRUvwKwnLI8fqjrCIQ6RPhUwnX6PG3cKkmLRHHnGc4gjyr8xQ6FcV_MG_ycBLmPhOsY00P7cQdBLpNfC971J9GEt3NEqJY3-_qD4LXSUFR5885k7VSRYGRbYfOVRcLbZEzeS_3elKR44iRVJoUCDA9_kvcc5xM1GwhPcrN5ZCdi7D1TiWkUb1KXbQI8XSQWNP5EU2S6i5KvOGb4EcUuQOUrF9W74yMjfOPq5mp1oprsqCo54L7ho23SWC2=s32-no?authuser=0"
               alt="Github Icon"
+              class="contact-img"
           /></a>
         </li>
         <li class="contact-me">
@@ -226,6 +298,7 @@
               src="https://www.iconsdb.com/icons/preview/white/linkedin-4-xxl.png"
               alt="LinkedIn Icon"
               width="32"
+              class="contact-img"
           /></a>
         </li>
         <li class="contact-me">
@@ -234,6 +307,7 @@
               src="https://www.iconsdb.com/icons/preview/white/instagram-xxl.png"
               alt="Instagram Icon"
               width="32"
+              class="contact-img"
           /></a>
         </li>
         <li class="contact-me">
@@ -242,6 +316,7 @@
               src="https://www.iconsdb.com/icons/preview/white/email-xxl.png"
               alt="Email Icon"
               width="32"
+              class="contact-img"
           /></a>
         </li>
       </ul>
